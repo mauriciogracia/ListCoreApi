@@ -13,13 +13,13 @@ namespace listCore.Controllers
         {
         }
 
-        [HttpPost(Name = "Add")]
-        public void Add([FromBody] string value)
+        [HttpPost]
+        public void Add(string value)
         {
             textLlist.Add(value);
         }
 
-        [HttpGet(Name = "ListAll")]
+        [HttpGet]
         public IEnumerable<string> Get()
         {
             return textLlist;
